@@ -23,7 +23,7 @@ matrix:
       - "node_modules/"
       - "build/"
       - "venv/"
-      - "venv2"
+      - "venv2/"
     options:
       ignore:
         - "pyspelling"
