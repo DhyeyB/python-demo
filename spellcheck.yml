@@ -22,6 +22,8 @@ matrix:
     exclude:
       - "node_modules/"
       - "build/"
+      - "venv/"
+      - "venv2"
     options:
       ignore:
         - "pyspelling"
