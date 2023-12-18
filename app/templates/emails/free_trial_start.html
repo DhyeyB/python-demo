@@ -1,0 +1,83 @@
+{% extends "emails/base.html" %} {% block main %}
+<tr style="border-collapse: collapse">
+  <td
+    align="left"
+    style="
+      padding: 0;
+      margin: 0;
+      padding-top: 10px;
+      padding-left: 20px;
+      padding-right: 20px;
+    "
+  >
+    <p
+      style="
+        margin: 0;
+        -webkit-text-size-adjust: none;
+        -ms-text-size-adjust: none;
+        mso-line-height-rule: exactly;
+        font-size: 24px;
+        font-family: arial, 'helvetica neue', helvetica, sans-serif;
+        line-height: 36px;
+        color: #002858;
+      "
+    >
+      Hi {{data.first_name}},
+    </p>
+  </td>
+</tr>
+<tr style="border-collapse: collapse">
+  <td
+    align="left"
+    style="
+      padding: 0;
+      margin: 0;
+      padding-top: 15px;
+      padding-left: 20px;
+      padding-right: 20px;
+    "
+  >
+    <p
+      style="
+        margin: 0;
+        -webkit-text-size-adjust: none;
+        -ms-text-size-adjust: none;
+        mso-line-height-rule: exactly;
+        font-size: 16px;
+        font-family: arial, 'helvetica neue', helvetica, sans-serif;
+        line-height: 24px;
+        color: #3d3d3d;
+      "
+    >
+      We are excited to inform you that your free trial of VirtuSign has officially started. Welcome to the future of contract creation!
+      <br><br>
+      Key Details:
+      <br>
+      Trial Start Date: {{data.trial_start_date}}
+      <br>
+      Trial Duration: {{data.trial_duration}} days
+      <br><br>
+      During your free trial, you will have full access to our robust contract creation platform, empowering you to streamline boost sales efficiency, and enhance your online business.
+      <br><br>
+      If you have any questions, require assistance, or want to explore all the features VirtuSign has to offer, please don't hesitate to reach out to our support team at support@virtu-sign.com. We're here to guide you through your trial and help you get the most out of our platform.
+      <br><br>
+      Thank you for choosing VirtuSign. We're excited to be part of your e-contract creation journey!
+    </p>
+  </td>
+</tr>
+
+<tr style="border-collapse: collapse">
+  <td
+    align="left"
+    style="
+      padding: 0;
+      margin: 0;
+      padding-top: 15px;
+      padding-left: 20px;
+      padding-right: 20px;
+    "
+  >
+  </td>
+</tr>
+
+{% endblock %}

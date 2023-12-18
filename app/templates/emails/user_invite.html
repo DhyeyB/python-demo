@@ -1,0 +1,66 @@
+{% extends "emails/base.html" %} {% block main %}
+<tr style="border-collapse: collapse">
+  <td
+    align="left"
+    style="
+      padding: 0;
+      margin: 0;
+      padding-top: 10px;
+      padding-left: 20px;
+      padding-right: 20px;
+    "
+  >
+    <p
+      style="
+        margin: 0;
+        -webkit-text-size-adjust: none;
+        -ms-text-size-adjust: none;
+        mso-line-height-rule: exactly;
+        font-size: 24px;
+        font-family: arial, 'helvetica neue', helvetica, sans-serif;
+        line-height: 36px;
+        color: #002858;
+      "
+    >
+      Hi {{data.first_name}},
+    </p>
+  </td>
+</tr>
+<tr style="border-collapse: collapse">
+  <td
+    align="left"
+    style="
+      padding: 0;
+      margin: 0;
+      padding-top: 15px;
+      padding-left: 20px;
+      padding-right: 20px;
+    "
+  >
+    <p
+      style="
+        margin: 0;
+        -webkit-text-size-adjust: none;
+        -ms-text-size-adjust: none;
+        mso-line-height-rule: exactly;
+        font-size: 16px;
+        font-family: arial, 'helvetica neue', helvetica, sans-serif;
+        line-height: 24px;
+        color: #3d3d3d;
+      "
+    >
+      <br>
+      {{data.legal_name}} has invited you to be part of their VirtuSign account. To get started, click on this button - <span class="restricted-editing-exception">
+        <button type="button" style="background:#14e4ea;border: none;padding: 5px;border-radius: 4px"><a href="{{data.invite_link}}" style="color:white;text-decoration: none">Accept Invite</a></button>
+      </span>
+      <br><br>
+      Or using this link: <a class="restricted-editing-exception" href="{{data.invite_link}}" target="_blank">{{data.invite_link}}</a>
+      <br><br>
+      If you have any questions or need assistance in making the most of your VirtuSign account, please feel free to reach out to our support team at support@virtu-sign.com
+      <br><br>
+      Once again, welcome to VirtuSign. We're excited to have you on board!
+      <br>
+    </p>
+  </td>
+</tr>
+{% endblock %}

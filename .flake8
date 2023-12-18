@@ -1,0 +1,7 @@
+[flake8]
+exclude = migrations/*
+ignore = E203, E266, E501, W503, F403, F401, W605, E711
+max-line-length = 79
+max-complexity = 18
+select = B,C,E,F,W,T4,B9
+kwargs-ignore-function-pattern = replace*|and_.*|filter.*|join.*|get.*|write.*|getattr.*|session.query.*|or_.*|distinct.*|group_by.*|order_by.*|Index.*|Column.*|format.*|datetime.strptime*|logger.*

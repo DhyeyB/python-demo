@@ -1,0 +1,60 @@
+{% extends "emails/base.html" %} {% block main %}
+<tr style="border-collapse: collapse">
+  <td
+    align="left"
+    style="
+      padding: 0;
+      margin: 0;
+      padding-top: 15px;
+      padding-left: 20px;
+      padding-right: 20px;
+    "
+  >
+    <p
+      style="
+        margin: 0;
+        -webkit-text-size-adjust: none;
+        -ms-text-size-adjust: none;
+        mso-line-height-rule: exactly;
+        font-size: 16px;
+        font-family: arial, 'helvetica neue', helvetica, sans-serif;
+        line-height: 24px;
+        color: #3d3d3d;
+      "
+    >
+      {{data.acount_name}},
+      <br><br>
+      We want to inform you that the deletion process for your account has been successfully completed. As of {{data.deletion_date}}, your account, along with all associated data, has been permanently removed from our system.
+      <br><br>
+      Important Information:
+		<br>
+	  Account Legal Name: {{data.account_legal_name}}
+      <br>
+      Account Email: {{data.account_email}}
+      <br>
+      Account Email: {{data.deletion_date}}
+      <br><br>      
+      If you have any questions or concerns regarding this account deletion or if you believe this action was unauthorized, please contact our support team immediately through our Contact Us page.
+      <br>
+      <br><br>
+      We want to express our gratitude for being a part of our community.
+      <br>
+    </p>
+  </td>
+</tr>
+
+<tr style="border-collapse: collapse">
+  <td
+    align="left"
+    style="
+      padding: 0;
+      margin: 0;
+      padding-top: 15px;
+      padding-left: 20px;
+      padding-right: 20px;
+    "
+  >
+  </td>
+</tr>
+
+{% endblock %}

@@ -1,0 +1,55 @@
+{% extends "emails/base.html" %} {% block main %}
+<tr style="border-collapse: collapse">
+  <td
+    align="left"
+    style="
+      padding: 0;
+      margin: 0;
+      padding-top: 15px;
+      padding-left: 20px;
+      padding-right: 20px;
+    "
+  >
+    <p
+      style="
+        margin: 0;
+        -webkit-text-size-adjust: none;
+        -ms-text-size-adjust: none;
+        mso-line-height-rule: exactly;
+        font-size: 16px;
+        font-family: arial, 'helvetica neue', helvetica, sans-serif;
+        line-height: 24px;
+        color: #3d3d3d;
+      "
+    >
+      {{data.full_name}},
+      <br><br>
+      I am pleased to inform you that all signees have successfully completed the signing process for the document. Click this button to view the contract :
+        <span class="restricted-editing-exception"><button type="button" style="background:#14e4ea;border: none;padding: 5px;border-radius: 4px"><a href="{{data.contract_link}}" style="color:white;text-decoration: none">Contract</a></button></span>
+      <br><br>
+      Or click the following link: <a class="restricted-editing-exception" href="{{data.contract_link}}" target="_blank">{{data.contract_link}}</a>
+      <br><br>
+      The document is now fully executed, and all necessary signatures have been obtained. This marks an important milestone in our workflow, and we are ready to proceed with the next steps.
+      <br><br>
+      Thank you for your attention to this matter. Your prompt review and approval, if required, will help ensure a smooth and efficient continuation of our processes.
+      <br><br>
+      Best regards,
+    </p>
+  </td>
+</tr>
+
+<tr style="border-collapse: collapse">
+  <td
+    align="left"
+    style="
+      padding: 0;
+      margin: 0;
+      padding-top: 15px;
+      padding-left: 20px;
+      padding-right: 20px;
+    "
+  >
+  </td>
+</tr>
+
+{% endblock %}

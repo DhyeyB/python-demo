@@ -1,0 +1,94 @@
+{% extends "emails/base.html" %} {% block main %}
+<tr style="border-collapse: collapse">
+  <td
+    align="left"
+    style="
+      padding: 0;
+      margin: 0;
+      padding-top: 10px;
+      padding-left: 20px;
+      padding-right: 20px;
+    "
+  >
+    <p
+      style="
+        margin: 0;
+        -webkit-text-size-adjust: none;
+        -ms-text-size-adjust: none;
+        mso-line-height-rule: exactly;
+        font-size: 24px;
+        font-family: arial, 'helvetica neue', helvetica, sans-serif;
+        line-height: 36px;
+        color: #002858;
+      "
+    >
+      Hi Team,
+    </p>
+  </td>
+</tr>
+<tr style="border-collapse: collapse">
+  <td
+    align="left"
+    style="
+      padding: 0;
+      margin: 0;
+      padding-top: 15px;
+      padding-left: 20px;
+      padding-right: 20px;
+    "
+  >
+    <p
+      style="
+        margin: 0;
+        -webkit-text-size-adjust: none;
+        -ms-text-size-adjust: none;
+        mso-line-height-rule: exactly;
+        font-size: 16px;
+        font-family: arial, 'helvetica neue', helvetica, sans-serif;
+        line-height: 24px;
+        color: #3d3d3d;
+      "
+    >
+      We have received a new inquiry from a potential customer. The details of the inquiry are as follows:
+      <br><br>
+      {% if data.first_name and data.last_name %}
+        Name : {{data.first_name}} {{data.last_name}}
+        <br>
+      {% endif %}
+      Date and Time of Inquiry: {{data.date_and_time_of_inquiry}}
+      <br>
+      Email: {{data.email}}
+      <br>
+      Company Name: {{data.company_name}}
+      <br>
+      {% if data.company_size %}
+        Company Size: {{data.company_size}}
+        <br>
+      {% endif %}
+      {% if data.message %}
+        Message: {{data.message}}
+        <br>
+      {% endif %}
+      <br>
+      This inquiry requires your attention, and we kindly request that you review it at your earliest convenience.
+      <br><br>
+      The inquirer may be seeking information, assistance, or clarification on our product, and it is important that we respond promptly to provide the best customer experience.
+    </p>
+  </td>
+</tr>
+
+<tr style="border-collapse: collapse">
+  <td
+    align="left"
+    style="
+      padding: 0;
+      margin: 0;
+      padding-top: 15px;
+      padding-left: 20px;
+      padding-right: 20px;
+    "
+  >
+  </td>
+</tr>
+
+{% endblock %}

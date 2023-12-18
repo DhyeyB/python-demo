@@ -1,0 +1,30 @@
+matrix:
+  - name: JavaScript
+    aspell:
+      lang: en
+      d: en_US
+    dictionary:
+      wordlists:
+      - ./en-custom.txt
+    sources:
+      - '**/*.py'
+      # - '**/*.js'
+      # - '**/*.json'
+      # - '**/*.md'
+      # - '**/*.ts
+    pipeline:
+      - pyspelling.filters.python
+      - pyspelling.filters.javascript
+      - pyspelling.filters.text
+      - pyspelling.filters.url
+    expect_match: false
+    default_encoding: utf-8
+    exclude:
+      - "node_modules/"
+      - "build/"
+    options:
+      ignore:
+        - "pyspelling"
+        - "GitHub"
+    custom:
+      - "localhost"
