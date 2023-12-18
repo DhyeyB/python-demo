@@ -19,11 +19,11 @@ jobs:
         id: spelling
         uses: check-spelling/check-spelling@main
         with:
-          # check_file_names: 1
-          # disable_checks: noisy-file
+          check_file_names: 1
+          disable_checks: noisy-file
           extra_dictionaries:
             cspell:aws/aws.txt
-            cspell:python/python.txt
+            # cspell:python/python.txt
             cspell:software-terms/dict/softwareTerms.txt
             cspell:npm/dict/npm.txt
             cspell:typescript/dict/typescript.txt
