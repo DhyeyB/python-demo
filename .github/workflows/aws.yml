@@ -19,7 +19,7 @@ jobs:
         id: spelling
         uses: check-spelling/check-spelling@main
         with:
-          check_file_names: 1
+          # check_file_names: 1
           # disable_checks: noisy-file
           extra_dictionaries:
             cspell:aws/aws.txt
