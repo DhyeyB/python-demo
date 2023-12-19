@@ -1,7 +1,7 @@
 name: Release Please testing
 on:
   push:
-    branches:
+    branches: 
       - main
 
 permissions:
@@ -20,7 +20,9 @@ jobs:
         uses: check-spelling/check-spelling@main
         with:
           check_file_names: 1
-          extra_dictionaries: cspell:aws/aws.txt
+          extra_dictionaries:
+            exclude.txt
+            cspell:aws/aws.txt
             cspell:software-terms/dict/softwareTerms.txt
             cspell:npm/dict/npm.txt
             cspell:typescript/dict/typescript.txt
@@ -32,7 +34,7 @@ jobs:
       #     config: ./spellcheck.yaml
 
 
-      
+
 # # This workflow will build and push a new container image to Amazon ECR,
 # # and then will deploy a new task definition to Amazon ECS, when there is a push to the "main" branch.
 # #
