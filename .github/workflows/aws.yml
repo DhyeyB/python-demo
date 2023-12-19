@@ -21,7 +21,6 @@ jobs:
         with:
           check_file_names: 1
           extra_dictionaries:
-            exclude.txt
             cspell:aws/aws.txt
             cspell:software-terms/dict/softwareTerms.txt
             cspell:npm/dict/npm.txt

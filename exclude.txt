@@ -1,5 +1,6 @@
 # Ignore directories (Golang) named `vendor`
 (?:^|/)vendor/
+(?:^|/).github/
 # Ignore directories named `third_party`
 (?:^|/)third_party/
 # Ignore npm files
@@ -15,7 +16,7 @@
 \.png$
 \.pyc$
 \.yml$
-\.flake8$
+.flake8$
 # Ignore Excel files (`.xsl` and `.xslx`)
 \.xslx?$
 # Ignore locales that aren't en / en_GB (roughly: keep en_US and drop everything else)
