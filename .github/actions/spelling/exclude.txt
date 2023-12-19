@@ -1,5 +1,6 @@
 # Ignore directories (Golang) named `vendor`
 (?:^|/)vendor/
+(?:^|/)app/helpers/
 (?:^|/).github/
 # Ignore directories named `third_party`
 (?:^|/)third_party/
@@ -28,4 +29,3 @@ locales/en_GB
 ^\.github/action/spelling/
 # Ignore all GitHub workflow files
 ^\.github/workflows/aws.yml
-^\app/helpers/
