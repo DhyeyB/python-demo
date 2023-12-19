@@ -1,6 +1,7 @@
 # Ignore directories (Golang) named `vendor`
 (?:^|/)vendor/
 (?:^|/)app/helpers/
+(?:^|/)app/templates/
 (?:^|/).github/
 # Ignore directories named `third_party`
 (?:^|/)third_party/
