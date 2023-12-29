@@ -1,0 +1,31 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "words": [
+    "mkdirp",
+    "tsmerge",
+    "githubusercontent",
+    "streetsidesoftware",
+    "vsmarketplacebadge",
+    "visualstudio"
+  ],
+  "enabledLanguageIds": [
+    "python",
+    "markdown"
+  ],
+  "dictionaryDefinitions": [
+    {
+      "name": "myWords",
+      "path": "/opt/edugem/apps/python-demo/dictionary.txt",
+      "addWords": true
+    }
+  ],
+  "dictionaries": [
+    "myWords"
+  ],
+  "enableFiletypes": [
+    "jsonc",
+    "plaintext",
+    "terraform"
+  ]
+}

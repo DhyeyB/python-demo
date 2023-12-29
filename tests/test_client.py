@@ -23,6 +23,7 @@ from tests.conftest import validate_response
 from tests.conftest import validate_status_code
 
 
+
 @pytest.mark.run(order=1)
 def test_create(user_client):
     """
