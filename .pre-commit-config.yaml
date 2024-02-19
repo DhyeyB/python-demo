@@ -1,7 +1,19 @@
 repos:
-- repo: https://github.com/compilerla/conventional-pre-commit
-  rev: v3.0.0
+# - repo: https://github.com/compilerla/conventional-pre-commit
+#   rev: v3.0.0
+#   hooks:
+#     - id: conventional-pre-commit
+#       stages: [commit-msg]
+#       args: []
+
+# - repo: https://github.com/DhyeyB/pytype.git
+#   rev: v0.0.1
+#   hooks:
+#     - id: pytype
+  
+- repo: https://github.com/mattseymour/pre-commit-pytype
+  rev: "2022.4.26"
   hooks:
-    - id: conventional-pre-commit
-      stages: [commit-msg]
-      args: []
+    - id: pytype
+      entry: "./custom_script.sh"
+      # additional_dependencies: [git]

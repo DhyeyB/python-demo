@@ -369,3 +369,5 @@ def get_auth_token_by_user_type(client, is_super_admin):
     auth_token = json.loads(authentication_api_response.data.decode(
         'utf-8')).get('data').get('auth_token')
     return auth_token
+
+
