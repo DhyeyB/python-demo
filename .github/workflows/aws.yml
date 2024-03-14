@@ -12,9 +12,10 @@ jobs:
   print_refs_heads:
     runs-on: ubuntu-latest
     steps:
-      - name: Print Refs/Heads
-        run: echo $GITHUB_REF
-  # pre-commit:
+      - uses: actions/checkout@v3
+        with:
+          ref: github.ref
+    # pre-commit:
   #   runs-on: ubuntu-latest
   #   steps:
   #     - uses: actions/checkout@v3
