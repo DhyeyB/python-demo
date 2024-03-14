@@ -9,27 +9,32 @@ permissions:
   pull-requests: write
 
 jobs:
-  pre-commit:
+  print_refs_heads:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-        #  if: github.ref == 'refs/heads/dev'
+      - name: Print Refs/Heads
+        run: echo $GITHUB_REF
+  # pre-commit:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #       #  if: github.ref == 'refs/heads/dev'
 
-      - uses: actions/setup-python@v3
-        #  if: github.ref == 'refs/heads/dev'
-        with:
-          python-version: 3.8
+  #     - uses: actions/setup-python@v3
+  #       #  if: github.ref == 'refs/heads/dev'
+  #       with:
+  #         python-version: 3.8
 
-      - name: Install dependencies
-        #  if: github.ref == 'refs/heads/dev'
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt  # replace with your dependencies
-          pip install pytest
-          pre-commit install --hook-type commit-msg
+  #     - name: Install dependencies
+  #       #  if: github.ref == 'refs/heads/dev'
+  #       run: |
+  #         python -m pip install --upgrade pip
+  #         pip install -r requirements.txt  # replace with your dependencies
+  #         pip install pytest
+  #         pre-commit install --hook-type commit-msg
 
-      - uses: pre-commit/action@v3.0.0
-        #  if: github.ref == 'refs/heads/dev'
+  #     - uses: pre-commit/action@v3.0.0
+  #       #  if: github.ref == 'refs/heads/dev'
 
 
   # spell-check:
